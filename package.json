@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://shailesh-recipe-app.herokuapp.com/api/"
+  "proxy": "https://shailesh-recipe-app.herokuapp.com/api"
 }
