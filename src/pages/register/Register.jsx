@@ -2,6 +2,7 @@ import axios from "axios";
 import { useRef } from "react";
 import "./register.css";
 import Navbar from "../../components/Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 import {
   EntryContainer,
   EntryContent,
@@ -17,7 +18,7 @@ export default function Register() {
   const password = useRef();
   const passwordAgain = useRef();
   const next = () => {
-    window.open("/login", "_self");
+    navigate("/login");
   };
   const handleClick = async (e) => {
     e.preventDefault();
@@ -32,7 +33,7 @@ export default function Register() {
       console.log(user);
       try {
         await axios.post("/auth/register", user);
-        window.open("/login", "_self");
+        navigate("/login");
       } catch (err) {
         console.log(err);
       }

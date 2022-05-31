@@ -21,7 +21,7 @@ const Login = () => {
   const username = useRef();
   const { loading, error, dispatch } = useContext(AuthContext);
   const next = () => {
-    window.open("/register", "_self");
+    navigate("/register");
   };
   const navigate = useNavigate();
 
