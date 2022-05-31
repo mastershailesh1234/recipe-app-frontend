@@ -25,7 +25,9 @@ import veg from "../../images/nonVeg.png";
 const Recipe = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
-  const { data, loading, error } = useFetch(`/recipe/find/${id}`);
+  const { data, loading, error } = useFetch(
+    `https://shailesh-recipe-app.herokuapp.com/api/recipe/find/${id}`
+  );
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {

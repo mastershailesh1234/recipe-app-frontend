@@ -14,7 +14,9 @@ import {
 } from "../components/Entry/EntryElements";
 import useFetch from "../hooks/useFetch";
 function FullMenu() {
-  const { data, loading, error } = useFetch("/recipe/");
+  const { data, loading, error } = useFetch(
+    "https://shailesh-recipe-app.herokuapp.com/api/recipe/"
+  );
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {

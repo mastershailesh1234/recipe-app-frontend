@@ -33,7 +33,10 @@ export default function Register() {
       };
       console.log(user);
       try {
-        await axios.post("/auth/register", user);
+        await axios.post(
+          "https://shailesh-recipe-app.herokuapp.com/api/auth/register",
+          user
+        );
         navigate("/login");
       } catch (err) {
         console.log(err);

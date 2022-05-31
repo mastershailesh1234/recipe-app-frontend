@@ -17,7 +17,7 @@ import useFetch from "../hooks/useFetch";
 function MainCourse() {
   const [isOpen, setIsOpen] = useState(false);
   const { data, loading, error } = useFetch(
-    "recipe/category?category=maincourse"
+    "https://shailesh-recipe-app.herokuapp.com/api/recipe/category?category=maincourse"
   );
   const toggle = () => {
     setIsOpen(!isOpen);
