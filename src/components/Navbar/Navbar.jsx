@@ -2,21 +2,23 @@ import React from "react";
 import { Nav, NavLink, NavIcon, Bars, NavRight } from "./NavbarElements";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./navbar.css";
 const Navbar = ({ toggle }) => {
+  const navigate = useNavigate();
   const { user } = useContext(AuthContext);
 
   const logout = () => {
     localStorage.removeItem("user");
-    window.open("/", "_self");
+    navigate("/");
   };
 
   const login = () => {
-    window.open("/login", "_self");
+    navigate("/login");
   };
   const register = () => {
-    window.open("/register", "_self");
+    navigate("/register");
   };
   return (
     <>
