@@ -79,9 +79,9 @@ export default function Register() {
                 type="password"
               />
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <EntryBtn type="submit">Login</EntryBtn>
+                <EntryBtn type="submit">Register</EntryBtn>
                 <EntryBtn type="submit" onClick={next}>
-                  Register
+                  Login
                 </EntryBtn>
               </div>
             </form>
