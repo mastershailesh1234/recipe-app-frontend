@@ -31,7 +31,9 @@ const Products = ({ heading, data }) => {
       </div>
       <ProductWrapper>
         {data
-          .filter((food) => food.name.toLowerCase().includes(query))
+          .filter((food) =>
+            food.name.toLowerCase().includes(query.toLowerCase())
+          )
           .map((product, index) => {
             if (product.type == "true") {
               var Img = (
@@ -61,7 +63,10 @@ const Products = ({ heading, data }) => {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small" onClick={() =>  navigate(`/recipe/${product._id}`)}>
+                  <Button
+                    size="small"
+                    onClick={() => navigate(`/recipe/${product._id}`)}
+                  >
                     Learn More
                   </Button>
                 </CardActions>
