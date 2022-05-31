@@ -13,6 +13,7 @@ import {
 import { GlobalStyle } from "../../globalStyles";
 import Footer from "../../components/Footer/Footer";
 export default function Register() {
+  const navigate = useNavigate();
   const username = useRef();
   const email = useRef();
   const password = useRef();
