@@ -1,0 +1,15 @@
+.navButton {
+  width: 70px;
+  margin: 15px 8px;
+  height: 35px;
+  background-color: red;
+  color: white;
+  transition: 0.2s ease-out;
+  border: none;
+}
+.navButton:hover {
+  color: black;
+  background-color: gold;
+  transition: 0.2s ease-out;
+  border: 2px solid black;
+}
