@@ -31,7 +31,13 @@ function EndingFood() {
           <EntryH1>Dessert RECIPES</EntryH1>
         </EntryItems>
       </EntryContainer>
-      <Products data={data} />
+      {loading ? (
+        "loading"
+      ) : (
+        <>
+          <Products data={data} />
+        </>
+      )}
       <Footer />
     </div>
   );

@@ -37,7 +37,13 @@ function MainCourse() {
         </EntryItems>
       </EntryContainer>
 
-      <Products data={data} />
+      {loading ? (
+        "loading"
+      ) : (
+        <>
+          <Products data={data} />
+        </>
+      )}
 
       <Footer />
     </div>

@@ -32,7 +32,13 @@ function SoupStarter() {
           <EntryP>Soup, Veg and Non-Veg Stater, Tikka</EntryP>
         </EntryItems>
       </EntryContainer>
-      <Products data={data} />
+      {loading ? (
+        "loading"
+      ) : (
+        <>
+          <Products data={data} />
+        </>
+      )}
       <Footer />
     </div>
   );
